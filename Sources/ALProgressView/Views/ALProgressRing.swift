@@ -112,6 +112,11 @@ open class ALProgressRing: UIView {
     /// The progress of the ring between 0 and 1. The ring will fill based on the value.
     public private(set) var progress: CGFloat = 0
 
+    /// Specifies the style of the endpoints of the ring.
+    public var lineCapStyle: CAShapeLayerLineCap = .round {
+        didSet { ringLayer.lineCap = lineCapStyle }
+    }
+
     private let ringLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.lineCap = .round

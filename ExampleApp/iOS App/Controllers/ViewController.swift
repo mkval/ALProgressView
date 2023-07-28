@@ -99,6 +99,7 @@ private extension MainViewController {
         setupColors()
         
         progressRing.lineWidth = 15
+        progressRing.lineCapStyle = .square
         
         emojiLabel.text = "✌️"
         emojiLabel.font = .systemFont(ofSize: 80, weight: .regular)
